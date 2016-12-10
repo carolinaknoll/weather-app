@@ -1,0 +1,75 @@
+/*
+ *
+ * General Styling
+ *
+ */
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  color: #55606E;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.weather-app-title {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.weather-app-box {
+  height: 300px;
+  max-width: 800px;
+  padding: 10px 20px 10px 20px;
+  display: block;
+  background: #99ccff;
+  box-shadow: 0 0 0px 0.4em rgba(255, 255, 255, 0.5) inset;
+  border-width: 10%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
