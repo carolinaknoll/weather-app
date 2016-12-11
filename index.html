@@ -18,11 +18,18 @@
           <h1>Weather App!</h1>
           <h2>Check the weather wherever you are.</h2>
         </div>
-        <div class="weather-app-box">
-          <div class="weather-app-box-left"></div>
-          <div class="weather-app-box-right"></div>
-        </div>
       </div>
+
+        <div class="weather-app-box">
+          <div class="container">
+            <p><span id="weatherCity">[city]</span>, <span id="weatherCountry">[country]</span>.</p>
+            <p><span id="weatherTemperature">[temperature]</span> <span id="toggleTemperature">[f/c]</span>.</p>
+            <p><span id="weatherTemperatureIcon"></span></p>
+            <p><span id="weatherDescription">[description]</span>.</p>
+            <p><span id ="weatherWindSpeed">[wind speed]</span> <span id="toggleSpeed">[meters/second / miles/hour]</span>.</p>
+          </div>
+        </div>
+
     </div>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
     <script src="js/scripts.js"></script>
