@@ -20,22 +20,33 @@ $(document).ready(function() {
         $("#weatherCity").html(json.name);
         $("#weatherCountry").html(json.sys.country);
 
-        // convert temperature from kelvin to celsius
-        var temp = (json.main.temp - 273.15).toFixed(1) + " &deg;C";
+        // convert temperature from default json data kelvin value to be displayed as celsius
+        var celsiusTemp = (json.main.temp - 273.15).toFixed(1);
 
-        // weather temperature
-        $("#weatherTemperature").html(temp);
+        // display weather temperature
+        $("#weatherTemperature").text(celsiusTemp + ' ºC');
 
-        // weather icon
+        // display weather icon
         var weatherIcon = json.weather[0].icon;
         var weatherIconURL = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
         $("#weatherTemperatureIcon").html("<img src=" + weatherIconURL + ">");
 
-        // weather description
+        // display weather description
         $("#weatherDescription").html(json.weather[0].description);
 
-        // weather wind speed
+        // display weather wind speed
         $("#weatherWindSpeed").html(json.wind.speed + " m/s");
+
+        // change to imperial unit values, currently only to fahrenheit temperature
+        $('#convertImperial').on('click', function () {
+          let fahrenTemp = ((9 * celsiusTemp) / 5) + 32;
+          $("#weatherTemperature").text(fahrenTemp.toFixed(1) + ' ºF');
+        });
+
+        // change to metric unit values, currently to default celsius temperature
+        $('#convertMetric').on('click', function () {
+          $("#weatherTemperature").text(celsiusTemp + ' ºC');
+        });
 
       });
     });
