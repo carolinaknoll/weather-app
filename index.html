@@ -22,7 +22,12 @@
 
         <div class="weather-app-box">
           <div class="container">
-            <p><span id="weatherCity">[city]</span>, <span id="weatherCountry">[country]</span>.</p>
+            <p>
+              <span id="weatherCity">[city]</span>,
+              <span id="weatherState">[state]</span>,
+              <span id="weatherCountry">[country]</span>.
+            </p>
+
             <p><span id="weatherTemperature">[temperature].</p>
             <p><span id="weatherTemperatureIcon"></span></p>
             <p><span id="weatherDescription">[description]</span>.</p>
@@ -30,6 +35,10 @@
             <button id="convertImperial">Convert to Imperial</button>
             <button id="convertMetric">Convert to Metric</button>
           </div>
+        </div>
+        <div class="wunderground-logo-mark">
+          <p>API data provided by</p>
+          <img src="img/wunderground-logo.png" class="wunderground-logo" alt="Wunderground">
         </div>
 
     </div>

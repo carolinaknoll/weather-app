@@ -85,3 +85,14 @@ li {
 .weather-app-box p span {
   color: blue;
 }
+
+.wunderground-logo-mark {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.wunderground-logo {
+  max-width: 150px;
+  max-height: 100px;
+  margin: auto;
+}
