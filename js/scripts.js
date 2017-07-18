@@ -9,8 +9,9 @@ $(document).ready(function() {
         console.log('json.current_observation', json.current_observation);
 
         // feed page elements with the returned json data
-        $('#country').html(`${json.current_observation.display_location.full}`);
+        $('#city').html(`${json.current_observation.display_location.city}`);
         $('#state').html(`${json.current_observation.display_location.state},`);
+        $('#country').html(`${json.current_observation.display_location.state_name}`);
 
         $('#temperature').text(`${json.current_observation.temp_c} ºC`);
         $('#windSpeed').html(`${json.current_observation.wind_kph} m/s`);
