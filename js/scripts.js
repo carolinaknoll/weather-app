@@ -7,12 +7,15 @@ $(document).ready(function() {
       $.getJSON(url, function(json) {
 
         console.log('json.current_observation', json.current_observation);
+        console.log('json', json);
+
 
         // feed page elements with the returned json data
         $('#city').html(`${json.current_observation.display_location.city}`);
         $('#state').html(`${json.current_observation.display_location.state},`);
         $('#country').html(`${json.current_observation.display_location.state_name}`);
 
+        $('#icon').attr('src', `${json.current_observation.icon_url}`);
         $('#temperature').text(`${json.current_observation.temp_c} ºC`);
         $('#windSpeed').html(`${json.current_observation.wind_kph} k/h`);
         $('#description').html(`${json.current_observation.weather}`);
