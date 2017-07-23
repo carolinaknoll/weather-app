@@ -14,7 +14,7 @@ $(document).ready(function() {
         $('#country').html(`${json.current_observation.display_location.state_name}`);
 
         $('#temperature').text(`${json.current_observation.temp_c} ºC`);
-        $('#windSpeed').html(`${json.current_observation.wind_kph} m/s`);
+        $('#windSpeed').html(`${json.current_observation.wind_kph} k/h`);
         $('#description').html(`${json.current_observation.weather}`);
         $('#observationTime').html(`${json.current_observation.observation_time}`);
 
